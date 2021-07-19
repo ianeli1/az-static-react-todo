@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: auto;
+}
+
+.window{
+    padding: 2rem;
+    border: 2px solid slategray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 5vh;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+h1{
+    
+    font-weight: 100;
+}
+
+.entryBox{
+    display: flex;
+}
+
+.entryBox > input {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: larger;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+}
+
+.entryBox > button {
+    margin: 0.5rem;
+    background: gray;
+    border: none;
+    padding: 0.75rem;
+    font-size: larger;
+}
+
+ul {
+    
+}
+
+li{
+    margin: 1rem;
+    font-size: larger;
+}
+
+.scrollable {
+    flex: 0 1;
+    overflow: auto;
+}

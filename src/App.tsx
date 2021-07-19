@@ -32,16 +32,17 @@ function App() {
   const [list, add] = useList()
   const [entry, setEntry] = useState("")
 
-  return <div>
+  return <div className="window">
       <h1>
         Cool Todo List ({list.length} entr{list.length > 1 ? "ies" : "y"})
       </h1>
 
-      <div>
-        <input placeholder="Todo entry" value={entry} onChange={e => setEntry(e.target.value)} />
+      <div className="entryBox">
+        <input placeholder="New entry..." value={entry} onChange={e => setEntry(e.target.value)} />
         <button onClick={() => entry && add(entry)}>Add</button>
       </div>
 
+      <div className="scrollable">
       <ul>
         {list.map((entry, i) => (
           <li key={i}>
@@ -49,6 +50,9 @@ function App() {
           </li>
         ))}
       </ul>
+      </div>
+
+      
     
     </div>;
 }
