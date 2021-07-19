@@ -20,14 +20,16 @@
       "type": "blob",
       "direction": "in",
       "path": "todo/todos.json",
-      "dataType": "string"
+      "dataType": "string",
+      "connection": "ConnString"
     },
     {
       "name": "blobOut",
       "type": "blob",
       "direction": "out",
       "path": "todo/todos.json",
-      "dataType": "string"
+      "dataType": "string",
+      "connection": "ConnString"
     }
   ],
   "scriptFile": "../dist/newTodo/index.js"

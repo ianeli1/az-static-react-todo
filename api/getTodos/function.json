@@ -20,7 +20,8 @@
       "type": "blob",
       "direction": "in",
       "path": "todo/todos.json",
-      "dataType": "string"
+      "dataType": "string",
+      "connection": "ConnString"
     }
   ],
   "scriptFile": "../dist/getTodos/index.js"
