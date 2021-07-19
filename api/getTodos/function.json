@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "blob",
+      "type": "blob",
+      "direction": "in",
+      "path": "todo/todos.json",
+      "dataType": "string"
+    }
+  ],
+  "scriptFile": "../dist/getTodos/index.js"
+}
