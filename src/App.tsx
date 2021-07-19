@@ -5,16 +5,18 @@ function useList(): [string[], ((element: string) => Promise<void>)]{
   const [list, setList] = useState<string[]>([])
 
   useEffect(() => {
-    getTodos().then(todos => setList(todos))
+    getTodos().then(todos => todos && setList(todos))
   }, [])
 
   async function getTodos(): Promise<string[]>{
     const req = await fetch ("/api/getTodos")
+    
     return await req.json()
   }
 
   async function add(element: string){
     await fetch("/api/newTodo", {
+      method: "POST",
       body: JSON.stringify({
         todo: element
       })
