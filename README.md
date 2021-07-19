@@ -1,5 +1,13 @@
-# React basic
+# Azure Static Web Apps demo
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site.
+## How to deploy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - Create an Azure Storage Account, save the Connection String from the "Access Keys" blade.
+ - Fork this repository.
+ - Create a new Static Web App with the newly forked repository.
+ - Add an Application Setting called "ConnString" with the connection string from the Storate Account as the value.
+
+### Tests
+ - Accessing the index ("/") should return a functional UI
+ - Making a GET request to "/api/getTodos" should return a JSON with all the entries
+
